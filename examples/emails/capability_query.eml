@@ -1,0 +1,6 @@
+To: k9hm4q.k_AB12CD34@paix.prifina.com
+Subject: PAIX-CAPABILITIES ?
+X-PAIX-Query: capabilities
+X-PAIX-From-Origin: https://newspaper.com
+
+{ "request_id": "abc123", "version": "v0.1" }
