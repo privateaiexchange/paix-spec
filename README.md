@@ -35,7 +35,7 @@ Created by **Valto Loikkanen** & **Tero Ahola** with the Prifina team. MIT-licen
 
 ## Contribute & discuss
 
-- **Read**: [CONTRIBUTING.md](CONTRIBUTING.md), [GOVERNANCE.md](GOVERNANCE.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)  
+- **Read**: [CONTRIBUTING.md](CONTRIBUTING.md), [GOVERNANCE.md](GOVERNANCE.md)  
 - **Open an Issue** (spec/doc/extension) or start a **Discussion** (Announcements, Q&A, Proposals, Show & Tell)
 
 ---
