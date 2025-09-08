@@ -1,0 +1,10 @@
+To: support@newspaper.com
+Subject: ACTION UpdateAddress
+X-PAIX-Preamble: v1 eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9...<sig>
+X-PAIX-BodyHash: sha256:8d0fb6b1e1...
+
+{
+  "account_id": "12345",
+  "new_address": "Example St 1, 00100 Helsinki, FI",
+  "effective_date": "2025-09-05"
+}
