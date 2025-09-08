@@ -1,0 +1,28 @@
+{
+  "address": "k9hm4q.k_AB12CD34@paix.prifina.com",
+  "provider": "prifina.com",
+  "features_supported": [
+    "email_verified",
+    "otp_login",
+    "eck_escalation",
+    "signed_actions",
+    "ai_interface",
+    "vc_age_over_18",
+    "vc_residency_eu",
+    "vc_identity_confirmed"
+  ],
+  "features_enabled": [
+    "email_verified",
+    "otp_login",
+    "eck_escalation",
+    "signed_actions",
+    "ai_interface"
+  ],
+  "twin_endpoint": "https://twin.user.ai/inbox",
+  "jwks": "https://twin.user.ai/.well-known/jwks.json",
+  "policy": {
+    "human_in_loop": true,
+    "otp_required_for_sensitive": true
+  },
+  "ttl_seconds": 3600
+}
