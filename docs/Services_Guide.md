@@ -166,6 +166,8 @@ def handle_order_update(customer_paix_address, order_id, status):
         send_regular_email_notification(customer_paix_address, order_id, status)
 ```
 
+> **💡 Complete Example**: See [E-commerce Integration](https://github.com/privateaiexchange/paix-examples/tree/main/integrations/ecommerce) for a full implementation.
+
 ### SaaS Application
 ```python
 def process_subscription_change(customer_paix_address, new_plan):
@@ -181,6 +183,8 @@ def process_subscription_change(customer_paix_address, new_plan):
         update_subscription(customer_paix_address, new_plan)
 ```
 
+> **💡 Complete Example**: See [SaaS Platform Integration](https://github.com/privateaiexchange/paix-examples/tree/main/integrations/saas) for production patterns.
+
 ### Customer Support
 ```python
 def handle_support_request(customer_paix_address, request):
@@ -191,6 +195,8 @@ def handle_support_request(customer_paix_address, request):
         # Route to human agent with PAIX context
         route_to_human_support(customer_paix_address, request, paix_context=True)
 ```
+
+> **💡 Complete Example**: See [Customer Support Integration](https://github.com/privateaiexchange/paix-examples/tree/main/integrations/support) for AI-human handoff patterns.
 
 ## Security Considerations
 
@@ -209,6 +215,8 @@ def handle_support_request(customer_paix_address, request):
 - Don't store unnecessary customer data
 - Respect selective disclosure preferences
 
+> **💡 Security Guide**: See [Security Implementation Examples](https://github.com/privateaiexchange/paix-examples/tree/main/security) for production-ready patterns.
+
 ## Getting Started
 
 1. **Start Simple:** Recognize PAIX addresses in your existing email flow
@@ -216,12 +224,45 @@ def handle_support_request(customer_paix_address, request):
 3. **Enable Automation:** Process structured AI requests with proper security
 4. **Scale Gradually:** Expand PAIX support based on customer adoption
 
-## Resources
+## Implementation Resources
 
-- **Technical Guide:** [Developer Quickstart](Developer_Quickstart.md)
-- **Real-World Example:** [Emma's Journey](Journey_Emma.md)
-- **Security Details:** [Security & Privacy](Security_Privacy.md)
-- **Full Specification:** [PAIX Spec v0.1](Spec_v0.1.md)
+### Quick Start
+- **[Developer Quickstart](Developer_Quickstart.md)** - Technical integration guide with code examples
+- **[Address Validation](https://github.com/privateaiexchange/paix-examples/tree/main/tools/address-parser)** - Production-ready parsers
+- **[Capability Discovery](https://github.com/privateaiexchange/paix-examples/tree/main/tools/capability-client)** - Query implementation patterns
+
+### Platform Examples
+- **[E-commerce Platforms](https://github.com/privateaiexchange/paix-examples/tree/main/integrations/ecommerce)** - Order management, returns, support
+- **[SaaS Applications](https://github.com/privateaiexchange/paix-examples/tree/main/integrations/saas)** - Subscription management, feature access
+- **[Customer Support](https://github.com/privateaiexchange/paix-examples/tree/main/integrations/support)** - AI-human collaboration patterns
+- **[Email Providers](https://github.com/privateaiexchange/paix-examples/tree/main/integrations/email-providers)** - Provider implementation examples
+
+### Security & Best Practices
+- **[Security Guide](Security_Privacy.md)** - Comprehensive security model
+- **[Signature Verification](https://github.com/privateaiexchange/paix-examples/tree/main/security/signature-verify)** - Production verification patterns
+- **[OTP Handling](https://github.com/privateaiexchange/paix-examples/tree/main/security/otp-handlers)** - Human-in-the-loop implementations
+- **[Rate Limiting](https://github.com/privateaiexchange/paix-examples/tree/main/security/rate-limiting)** - API protection patterns
+
+### Business Case
+- **[Value Stack](PAIX_Value_Stack.md)** - Executive summary and ROI analysis
+- **[Real-World Scenario](Journey_Emma.md)** - See PAIX in action through Emma's journey
+- **[Comparison Analysis](Comparison_Appendix.md)** - PAIX vs alternatives
+
+## Community & Support
+
+### Community Examples
+- **[Community Contributions](https://github.com/privateaiexchange/paix-examples/tree/main/community)** - Real-world implementations from users
+- **[Integration Showcases](https://github.com/privateaiexchange/paix-examples/tree/main/showcases)** - Featured implementations
+
+### Get Help
+- **[GitHub Discussions](https://github.com/privateaiexchange/paix-spec/discussions)** - Community Q&A and ideas
+- **[Technical Issues](https://github.com/privateaiexchange/paix-spec/issues)** - Bug reports and feature requests
+- **[Contributing Guide](../CONTRIBUTING.md)** - How to contribute back to the ecosystem
+
+### Share Your Implementation
+Have you built a PAIX integration? We'd love to feature it:
+- **[Submit Your Example](https://github.com/privateaiexchange/paix-examples/tree/main/community)** - Share with the community
+- **[Case Study Program](https://github.com/privateaiexchange/paix-spec/discussions/categories/show-and-tell)** - Tell your success story
 
 ## In short
 
@@ -233,6 +274,19 @@ PAIX is a shared smart email protocol for your customers and their AIs.
 - **Open, gradual, and safe:** you adopt at your own pace
 
 **With PAIX, you're not just emailing a customer — you're connected to both the customer and their AI, through one shared universal interface.**
+
+---
+
+## 🧭 Navigation
+
+**Getting Started**: [Primer](Primer_Cover.md) → [Whitepaper](Whitepaper.md) → [Developer Quickstart](Developer_Quickstart.md)
+
+**By Role**:
+- **End Users**: [Individuals Guide](Individuals_Guide.md)
+- **Developers**: [Developer Quickstart](Developer_Quickstart.md) | [Examples Repo](https://github.com/privateaiexchange/paix-examples)
+- **Providers**: [Providers Guide](Providers_Guide.md)
+
+**Technical**: [Specification](Spec_v0.1.md) | [Security](Security_Privacy.md) | [Extensibility](Extensibility_Registry.md)
 
 ---
 
