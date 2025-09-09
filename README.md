@@ -24,10 +24,26 @@ Browsers are for humans. Agents scale when they act in the background—async, p
 
 ## Start here
 
-- **Primer**: [/docs/Primer_Cover.md](docs/Primer_Cover.md)  
-- **Whitepaper**: [/docs/Whitepaper.md](docs/Whitepaper.md)  
-- **Spec v0.1 (draft)**: [/docs/Spec_v0.1.md](docs/Spec_v0.1.md)  
-- **Examples**: [/examples/emails](examples/emails) and [/docs/Journey_Emma.md](docs/Journey_Emma.md)
+### Quick Introduction
+- **Primer**: [/docs/Primer_Cover.md](docs/Primer_Cover.md) — Fast introduction to PAIX
+- **Whitepaper**: [/docs/Whitepaper.md](docs/Whitepaper.md) — Complete protocol overview
+- **Real-world scenario**: [/docs/Journey_Emma.md](docs/Journey_Emma.md) — See PAIX in action
+
+### By Your Role
+- **Developers**: [Developer Quickstart](docs/Developer_Quickstart.md) → [Examples & SDKs](https://github.com/privateaiexchange/paix-examples)
+- **Services**: [Services Guide](docs/Services_Guide.md) — Business benefits and integration
+- **Providers**: [Providers Guide](docs/Providers_Guide.md) — Email provider implementation
+- **End Users**: [Individuals Guide](docs/Individuals_Guide.md) — How to get and use PAIX
+
+### Technical Reference
+- **Spec v0.1 (draft)**: [/docs/Spec_v0.1.md](docs/Spec_v0.1.md) — Complete technical specification
+- **Address examples**: [/examples/addresses.md](examples/addresses.md) — Validation and parsing
+- **Email examples**: [/examples/emails](examples/emails) — Message format samples
+
+## Related Repositories
+
+- **[paix-examples](https://github.com/privateaiexchange/paix-examples)** — SDK libraries, integration examples, and reference implementations
+- **[Organization Overview](https://github.com/privateaiexchange)** — Complete PAIX ecosystem and community information
 
 ## Who's behind PAIX?
 
@@ -37,6 +53,7 @@ Created by **Valto Loikkanen** & **Tero Ahola** with the Prifina team. MIT-licen
 
 - **Read**: [CONTRIBUTING.md](CONTRIBUTING.md), [GOVERNANCE.md](GOVERNANCE.md)  
 - **Open an Issue** (spec/doc/extension) or start a **Discussion** (Announcements, Q&A, Proposals, Show & Tell)
+- **Build Examples**: Contribute to [paix-examples](https://github.com/privateaiexchange/paix-examples) with SDKs and integrations
 
 ---
 
