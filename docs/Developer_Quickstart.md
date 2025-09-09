@@ -6,6 +6,14 @@
 
 This guide helps developers quickly add PAIX (Private AI eXchange) support to their existing services. PAIX extends email to enable secure human-AI collaboration, and your service can participate with minimal changes.
 
+## SDK Libraries & Tools
+
+For ready-to-use libraries and complete integration examples:
+- **[PAIX Examples Repository](https://github.com/privateaiexchange/paix-examples)** - SDK libraries, integration examples, and reference implementations
+- **[JavaScript/TypeScript SDK](https://github.com/privateaiexchange/paix-examples/tree/main/sdks/javascript)** *(coming soon)*
+- **[Python SDK](https://github.com/privateaiexchange/paix-examples/tree/main/sdks/python)** *(coming soon)*
+- **[Security Examples](https://github.com/privateaiexchange/paix-examples/tree/main/security)** *(coming soon)*
+
 ## Quick Integration Levels
 
 ### Level 0: Do Nothing ✅
@@ -33,7 +41,7 @@ import re
 
 def is_paix_address(email):
     """Check if email is a PAIX address"""
-    pattern = r'^[a-zA-Z_][a-zA-Z0-9_]{5,15}(\\.k_[a-zA-Z0-9_\\-]{8,32})?(\+[a-zA-Z0-9_\\-]{1,32})?@paix\\.[a-zA-Z0-9\\-\\.]+$'
+    pattern = r'^[a-zA-Z_][a-zA-Z0-9_]{5,15}(\\.k_[a-zA-Z0-9_\\-]{8,32})?(\\+[a-zA-Z0-9_\\-]{1,32})?@paix\\.[a-zA-Z0-9\\-\\.]+$'
     return bool(re.match(pattern, email))
 
 def handle_email(sender, subject, body):
@@ -44,6 +52,8 @@ def handle_email(sender, subject, body):
         # Regular email handling
         route_to_standard_support(sender, subject, body)
 ```
+
+> **💡 Pro Tip**: See [address validation examples](https://github.com/privateaiexchange/paix-examples/tree/main/tools/address-parser) for production-ready parsers in multiple languages.
 
 ### Level 2: Capability Discovery 🔍
 **Effort:** 30 minutes  
@@ -84,6 +94,8 @@ def paix_capabilities():
         }
     })
 ```
+
+> **💡 Pro Tip**: Check out [capability discovery examples](https://github.com/privateaiexchange/paix-examples/tree/main/tools/capability-client) for different implementation patterns.
 
 ### Level 3: Action Processing ⚡
 **Effort:** 2-4 hours  
@@ -133,6 +145,8 @@ def handle_paix_action(sender, action_data):
     return send_action_response(sender, result)
 ```
 
+> **💡 Pro Tip**: See [signature verification examples](https://github.com/privateaiexchange/paix-examples/tree/main/security/signature-verify) for production-ready security implementations.
+
 ## Address Format Quick Reference
 
 ```
@@ -168,6 +182,8 @@ def handle_support_request(sender, subject, body):
     process_support_ticket(user_info, subject, body)
 ```
 
+> **💡 See Example**: [Customer Support Integration](https://github.com/privateaiexchange/paix-examples/tree/main/integrations/support)
+
 ### 2. SaaS Applications
 ```python
 # Perfect for: Project management, CRM, productivity tools
@@ -179,6 +195,8 @@ def create_api_session(paix_address):
         return session
     return None
 ```
+
+> **💡 See Example**: [SaaS Platform Integration](https://github.com/privateaiexchange/paix-examples/tree/main/integrations/saas)
 
 ### 3. E-commerce Platforms
 ```python
@@ -193,6 +211,8 @@ def handle_order_inquiry(sender, body):
     # Fall back to human customer service
     route_to_human_agent(sender, body)
 ```
+
+> **💡 See Example**: [E-commerce Integration](https://github.com/privateaiexchange/paix-examples/tree/main/integrations/ecommerce)
 
 ## Security Implementation
 
@@ -217,6 +237,8 @@ def verify_action_signature(action_data, sender_address):
         log_security_error(f"Signature verification failed: {e}")
         return False
 ```
+
+> **💡 Production Ready**: Use the [signature verification utilities](https://github.com/privateaiexchange/paix-examples/tree/main/security/signature-verify) for battle-tested implementations.
 
 ### OTP Implementation
 ```python
@@ -251,6 +273,8 @@ def verify_otp_response(sender, otp_response):
     # OTP verified, process the action
     return process_action(pending['action_data'])
 ```
+
+> **💡 See Examples**: [OTP challenge/response patterns](https://github.com/privateaiexchange/paix-examples/tree/main/security/otp-handlers) for different implementation approaches.
 
 ## Testing Your Integration
 
@@ -370,27 +394,51 @@ def integration_test():
     test_signed_action(test_address)
 ```
 
+## Community Examples
+
+Real-world implementations and patterns from the community:
+- **[Community Integrations](https://github.com/privateaiexchange/paix-examples/tree/main/community)** - User-contributed examples
+- **[Platform-Specific Guides](https://github.com/privateaiexchange/paix-examples/tree/main/integrations)** - Integration patterns for popular platforms
+- **[Security Patterns](https://github.com/privateaiexchange/paix-examples/tree/main/security)** - Production security implementations
+
 ## Next Steps
 
 1. **Choose Your Level**: Start with Level 1 recognition
-2. **Read the Spec**: Review [PAIX Specification v0.1](../docs/Spec_v0.1.md)
+2. **Use SDKs**: Check [available SDKs](https://github.com/privateaiexchange/paix-examples/tree/main/sdks) for your language
 3. **Join Community**: Participate in [GitHub Discussions](https://github.com/privateaiexchange/paix-spec/discussions)
 4. **Get Test Credentials**: Contact PAIX providers for development access
-5. **Share Examples**: Contribute integration examples to help others
+5. **Share Examples**: Contribute to [paix-examples](https://github.com/privateaiexchange/paix-examples) to help others
 
 ## Resources
 
-- **Full Specification**: [docs/Spec_v0.1.md](../docs/Spec_v0.1.md)
+### Technical Documentation
+- **Full Specification**: [Spec_v0.1.md](Spec_v0.1.md)
 - **Address Examples**: [examples/addresses.md](../examples/addresses.md)
-- **Real-world Scenarios**: [docs/Journey_Emma.md](../docs/Journey_Emma.md)
-- **Security Guide**: [docs/Security_Privacy.md](../docs/Security_Privacy.md)
-- **Provider Guide**: [docs/Providers_Guide.md](../docs/Providers_Guide.md)
+- **Security Guide**: [Security_Privacy.md](Security_Privacy.md)
+- **Provider Guide**: [Providers_Guide.md](Providers_Guide.md)
 
-## Questions?
+### Implementation Examples
+- **[Examples Repository](https://github.com/privateaiexchange/paix-examples)** - Complete implementations and SDKs
+- **Real-world Scenarios**: [Journey_Emma.md](Journey_Emma.md)
+- **Services Guide**: [Services_Guide.md](Services_Guide.md)
 
-- Open an issue: [GitHub Issues](https://github.com/privateaiexchange/paix-spec/issues)
-- Start a discussion: [GitHub Discussions](https://github.com/privateaiexchange/paix-spec/discussions)
-- Check the FAQ: [docs/FAQ.md](../docs/FAQ.md)
+### Community & Support
+- **[GitHub Issues](https://github.com/privateaiexchange/paix-spec/issues)** - Bug reports and feature requests
+- **[GitHub Discussions](https://github.com/privateaiexchange/paix-spec/discussions)** - Questions and community help
+- **[Contributing Guide](../CONTRIBUTING.md)** - How to contribute to PAIX
+
+---
+
+## 🧭 Navigation
+
+**Getting Started**: [Primer](Primer_Cover.md) → [Whitepaper](Whitepaper.md) → **Developer Quickstart**
+
+**By Role**:
+- **End Users**: [Individuals Guide](Individuals_Guide.md)
+- **Services**: [Services Guide](Services_Guide.md) | [Business Case](PAIX_Value_Stack.md)
+- **Providers**: [Providers Guide](Providers_Guide.md)
+
+**Technical**: [Specification](Spec_v0.1.md) | [Security](Security_Privacy.md) | [Examples](https://github.com/privateaiexchange/paix-examples)
 
 ---
 
